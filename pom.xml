@@ -4,9 +4,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.example</groupId>
-    <artifactId>EndMinecraftPlusPlus</artifactId>
-    <version>1.15.1-SNAPSHOT</version>
+    <groupId>co.akarin</groupId>
+    <artifactId>EndMinecraftUltra</artifactId>
+    <version>1.16.1</version>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
@@ -49,9 +49,9 @@
         <dependency>
             <groupId> mcprotocollib </groupId>
             <artifactId> mcprotocollib </artifactId>
-            <version>1.15.1</version>
+            <version>1.16.1</version>
             <scope>system</scope>
-            <systemPath>${pom.basedir}/Libs/mcprotocollib-1.15.1-1-SNAPSHOT.jar</systemPath>
+            <systemPath>${pom.basedir}/Libs/mcprotocollib-1.16.1SNAPSHOT.jar</systemPath>
         </dependency>
         <dependency>
             <groupId> packetlib </groupId>
