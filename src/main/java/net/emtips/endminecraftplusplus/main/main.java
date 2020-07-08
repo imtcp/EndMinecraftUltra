@@ -30,7 +30,7 @@ public class main {
     }
 
     private static void getInfo() throws NamingException {
-        log("欢迎使用EndMinecraftPlus++压测程序 协议库版本:1.15.1", "",  "=======================");
+        log("欢迎使用EndMinecraftUltra压测程序 协议库版本:1.16.1", "",  "=======================");
         log("请输入ip地址");
         ip = scanner.nextLine();
         if (ip.contains(":")) {
