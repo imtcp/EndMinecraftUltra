@@ -1,4 +1,4 @@
-package net.emtips.endminecraftplusplus.Protocol;
+package co.akarin.endminecraftultra.Protocol;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;

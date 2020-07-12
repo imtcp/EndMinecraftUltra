@@ -1,4 +1,4 @@
-package net.emtips.endminecraftplusplus.ATTACK;
+package co.akarin.endminecraftultra.ATTACK;
 
 import java.io.IOException;
 import java.io.OutputStream;
@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import net.emtips.endminecraftplusplus.utils.mainUtils;
+import co.akarin.endminecraftultra.utils.mainUtils;
 
 public class MotdAttack extends IAttack {
     public List<Thread> threads=new ArrayList<Thread>();

@@ -1,4 +1,4 @@
-package net.emtips.endminecraftplusplus.Protocol;
+package co.akarin.endminecraftultra.Protocol;
 
 import com.github.steveice10.packetlib.io.NetInput;
 import com.github.steveice10.packetlib.io.NetOutput;

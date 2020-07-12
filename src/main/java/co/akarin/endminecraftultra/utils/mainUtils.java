@@ -1,4 +1,4 @@
-package net.emtips.endminecraftplusplus.utils;
+package co.akarin.endminecraftultra.utils;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

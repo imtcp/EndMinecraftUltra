@@ -1,4 +1,4 @@
-package net.emtips.endminecraftplusplus.ATTACK;
+package co.akarin.endminecraftultra.ATTACK;
 
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -23,10 +23,10 @@ import com.github.steveice10.packetlib.Session;
 import com.github.steveice10.packetlib.event.session.*;
 import com.github.steveice10.packetlib.tcp.TcpSessionFactory;
 
-import net.emtips.endminecraftplusplus.Protocol.ACP;
-import net.emtips.endminecraftplusplus.utils.mainUtils;
-import net.emtips.endminecraftplusplus.proxy.ProxyPool;
-import net.emtips.endminecraftplusplus.Protocol.MCForge;
+import co.akarin.endminecraftultra.Protocol.ACP;
+import co.akarin.endminecraftultra.utils.mainUtils;
+import co.akarin.endminecraftultra.proxy.ProxyPool;
+import co.akarin.endminecraftultra.Protocol.MCForge;
 
 public class DistributedBotAttack extends IAttack{
 
@@ -179,7 +179,7 @@ public class DistributedBotAttack extends IAttack{
                 }else{
                     msg=e.getReason();
                 }
-                mainUtils.log("Client","[断开]["+username+"] " +msg);
+                mainUtils.log("Client","[断开连接]["+username+"] " +msg);
             }
         });
         return client;

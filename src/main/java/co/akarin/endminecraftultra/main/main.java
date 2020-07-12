@@ -1,4 +1,4 @@
-package net.emtips.endminecraftplusplus.main;
+package co.akarin.endminecraftultra.main;
 
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
@@ -9,11 +9,11 @@ import javax.naming.NamingException;
 import javax.naming.directory.Attribute;
 import javax.naming.directory.InitialDirContext;
 
-import net.emtips.endminecraftplusplus.other.ASMInject;
-import net.emtips.endminecraftplusplus.Protocol.MCForgelnject;
+import co.akarin.endminecraftultra.other.ASMInject;
+import co.akarin.endminecraftultra.Protocol.MCForgelnject;
 
-import static net.emtips.endminecraftplusplus.utils.mainUtils.getCo;
-import static net.emtips.endminecraftplusplus.utils.mainUtils.log;
+import static co.akarin.endminecraftultra.utils.mainUtils.getCo;
+import static co.akarin.endminecraftultra.utils.mainUtils.log;
 
 public class main {
     private static String ip;
@@ -30,15 +30,15 @@ public class main {
     }
 
     private static void getInfo() throws NamingException {
-        log("欢迎使用EndMinecraftUltra压测程序 协议库版本:1.16.1", "",  "=======================");
-        log("请输入ip地址");
+        log("欢迎使用EndMinecraftUltra压测工具 协议库版本:1.16.1", "",  "=======================");
+        log("请输入服务器IP/域名地址");
         ip = scanner.nextLine();
         if (ip.contains(":")) {
             String[] tmpip = ip.split(":");
             ip = tmpip[0];
             port = Integer.parseInt(tmpip[1]);
         } else {
-            log("请输入端口(25565)");
+            log("请输入端口(默认25565)");
             port = getCo(scanner.nextLine(), 25565);
         }
         Hashtable<String, String> hashtable = new Hashtable<String, String>();
@@ -60,7 +60,7 @@ public class main {
     private static void showMenu() throws IOException, InterruptedException {
         Menu menu = new Menu(scanner, ip, port);
         while (true) {
-            log("请输入攻击方式：", "1 : MOTD攻击", "2 : 分布式假人攻击(集群压测)");
+            log("请输入攻击方式：", "1 : MOTD攻击", "2 : 分布式假人压测(集群压测)");
             log("========================");
             switch (getCo(scanner.nextLine(), 2)) {
                 case 1:

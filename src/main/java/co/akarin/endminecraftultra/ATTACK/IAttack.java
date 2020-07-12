@@ -1,4 +1,4 @@
-package net.emtips.endminecraftplusplus.ATTACK;
+package co.akarin.endminecraftultra.ATTACK;
 
 import java.util.HashMap;
 

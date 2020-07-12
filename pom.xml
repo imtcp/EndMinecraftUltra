@@ -26,7 +26,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>2.0.1.RELEASE</version>
                 <configuration>
-                    <maimClass>net.emtips.endminecraftplusplus.main.main</maimClass>
+                    <mainClass>co.akarin.endminecraftultra.main.main</mainClass>
                     <includeSystemScope>true</includeSystemScope>
                 </configuration>
                 <executions>
@@ -48,7 +48,7 @@
         </dependency>
         <dependency>
             <groupId> mcprotocollib </groupId>
-            <artifactId> mcprotocollib </artifactId>
+            <artifactId>mcprotocollib</artifactId>
             <version>1.16.1</version>
             <scope>system</scope>
             <systemPath>${pom.basedir}/Libs/mcprotocollib-1.16.1-SNAPSHOT.jar</systemPath>
@@ -70,7 +70,7 @@
         <dependency>
             <groupId>io.netty</groupId>
             <artifactId>netty-all</artifactId>
-            <version>4.1.44.Final</version>
+            <version>4.1.50.Final</version>
         </dependency>
     </dependencies>
 
