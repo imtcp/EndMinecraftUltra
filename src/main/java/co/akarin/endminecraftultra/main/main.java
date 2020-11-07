@@ -30,7 +30,7 @@ public class main {
     }
 
     private static void getInfo() throws NamingException {
-        log("欢迎使用EndMinecraftUltra压测工具 协议库版本:1.16.1", "",  "=======================");
+        log("欢迎使用EndMinecraftUltra压测工具 协议库版本:1.16.4", "",  "=======================");
         log("请输入服务器IP/域名地址");
         ip = scanner.nextLine();
         if (ip.contains(":")) {
@@ -60,7 +60,7 @@ public class main {
     private static void showMenu() throws IOException, InterruptedException {
         Menu menu = new Menu(scanner, ip, port);
         while (true) {
-            log("请输入攻击方式：", "1 : MOTD攻击", "2 : 分布式假人压测(集群压测)");
+            log("请输入压测方式：", "1 : MOTD发包测试", "2 : 分布式假人压测(集群压测)");
             log("========================");
             switch (getCo(scanner.nextLine(), 2)) {
                 case 1:

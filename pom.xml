@@ -6,7 +6,7 @@
 
     <groupId>co.akarin</groupId>
     <artifactId>EndMinecraftUltra</artifactId>
-    <version>1.16.1</version>
+    <version>1.16.4</version>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
@@ -47,30 +47,24 @@
             <version>3.26.0-GA</version>
         </dependency>
         <dependency>
-            <groupId> mcprotocollib </groupId>
-            <artifactId> mcprotocollib </artifactId>
-            <version>1.16.1</version>
-            <scope>system</scope>
-            <systemPath>${pom.basedir}/Libs/mcprotocollib-1.16.1-SNAPSHOT.jar</systemPath>
+            <groupId>com.github.Steveice10</groupId>
+            <artifactId>MCProtocolLib</artifactId>
+            <version>1.16.4-SNAPSHOT</version>
         </dependency>
         <dependency>
-            <groupId> packetlib </groupId>
-            <artifactId> packetlib </artifactId>
-            <version>1.5</version>
-            <scope>system</scope>
-            <systemPath>${pom.basedir}/Libs/packetlib-1.5-SNAPSHOT.jar</systemPath>
+            <groupId>com.github.Steveice10</groupId>
+            <artifactId>PacketLib</artifactId>
+            <version>1.7</version>
         </dependency>
         <dependency>
-            <groupId> mcauthlib </groupId>
-            <artifactId> mcauthlib </artifactId>
-            <version>1.2</version>
-            <scope>system</scope>
-            <systemPath>${pom.basedir}/Libs/mcauthlib-1.2-SNAPSHOT.jar</systemPath>
+            <groupId>com.github.Steveice10</groupId>
+            <artifactId>MCAuthLib</artifactId>
+            <version>1.3</version>
         </dependency>
         <dependency>
             <groupId>io.netty</groupId>
             <artifactId>netty-all</artifactId>
-            <version>4.1.50.Final</version>
+            <version>4.1.45.Final</version>
         </dependency>
     </dependencies>
 
@@ -80,7 +74,10 @@
             <id>maven2</id>
             <url>https://maven.aliyun.com/repository/central</url>
         </repository>
-
+		<repository>
+			<id>jitpack.io</id>
+			<url>https://jitpack.io</url>
+		</repository>
     </repositories>
 
 </project>
