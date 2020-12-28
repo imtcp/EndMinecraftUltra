@@ -8,3 +8,7 @@
 2.集群假人<br>
 3.集群假人Tab<br>
 4.目前支持MC1.16.4版本
+
+#### 效果展示: ####
+![emu.png](https://i.loli.net/2020/12/28/ljp7hZ6i2EUFYdn.png)
+
