@@ -146,7 +146,7 @@ public class DistributedBotAttack extends IAttack{
         }
     }
 
-    public Client createClient(final String ip,int port,final String username) {
+    public Client createClient(final String ip,int port,final String username, Proxy proxy) {
         Client client=new Client(ip,port,new MinecraftProtocol(username), new TcpSessionFactory());
         new MCForge(client.getSession(),this.modList).init();
         client.getSession().addListener(new SessionListener() {
