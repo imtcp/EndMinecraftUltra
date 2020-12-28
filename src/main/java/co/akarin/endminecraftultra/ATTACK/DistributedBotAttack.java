@@ -146,7 +146,7 @@ public class DistributedBotAttack extends IAttack{
         }
     }
 
-    public Client createClient(final String ip,int port,final String username,Proxy proxy) {
+    public Client createClient(final String ip,int port,final String username) {
         Client client=new Client(ip,port,new MinecraftProtocol(username), new TcpSessionFactory(proxy));
         new MCForge(client.getSession(),this.modList).init();
         client.getSession().addListener(new SessionListener() {
@@ -163,7 +163,7 @@ public class DistributedBotAttack extends IAttack{
                     }
                 }else if (e.getPacket() instanceof ServerJoinGamePacket) {
                     e.getSession().setFlag("join",true);
-                    mainUtils.log("Client","[连接成功]["+username+"]");
+                    mainUtils.log("Client","[发送连接请求]["+username+"]");
                 }
             }
 
