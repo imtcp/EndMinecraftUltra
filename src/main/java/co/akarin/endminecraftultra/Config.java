@@ -14,7 +14,11 @@ public class Config {
         try {
             instance = new Gson().fromJson(new InputStreamReader(new FileInputStream(new File("config.json"))), Config.class);
         } catch (Exception e) {
-            mainUtils.log("配置文件加载失败: " + e.getMessage());
+			mainUtils.log("*******************************************************");
+            mainUtils.log("*错误！无法加载配置文件: " + e.getMessage());
+			mainUtils.log("*请到'https://acg.kr/emuconfig'获取一个新的配置文件");
+			mainUtils.log("*如果配置文件内有中文等非英文语言请务必转码成ANSI使用!");
+			mainUtils.log("*******************************************************");
             instance = new Config();
         }
         if (instance.username == null || instance.username.length == 0) instance.username = new String[] {"$rnd"};
