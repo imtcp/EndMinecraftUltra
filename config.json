@@ -1,0 +1,10 @@
+{
+  "username": [
+    "$rnd"
+  ],
+  "register": "/register $pwd $pwd",
+  "messages": [
+    "[$rnd] 哼哼~啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊~ [$rnd]",
+    "[$rnd] 啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊~ [$rnd]"
+  ]
+}

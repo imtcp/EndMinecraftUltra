@@ -9,6 +9,7 @@ import javax.naming.NamingException;
 import javax.naming.directory.Attribute;
 import javax.naming.directory.InitialDirContext;
 
+import co.akarin.endminecraftultra.Config;
 import co.akarin.endminecraftultra.other.ASMInject;
 import co.akarin.endminecraftultra.Protocol.MCForgelnject;
 
@@ -25,6 +26,7 @@ public class main {
     public static void main(String[] args) throws InterruptedException, IOException, IllegalAccessException, InstantiationException, NoSuchFieldException, NoSuchMethodException, InvocationTargetException, ClassNotFoundException, NamingException {
         ASMInject.inject();
         MCForgelnject.inject();
+		Config.loadConfig();
         getInfo();
         showMenu();
     }

