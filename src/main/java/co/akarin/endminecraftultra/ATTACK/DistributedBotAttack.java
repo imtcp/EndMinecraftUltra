@@ -1,4 +1,4 @@
-package co.akarin.endminecraftultra.ATTACK;
+package co.akarin.EndMinecraftUltra.attack;
 
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -24,11 +24,11 @@ import com.github.steveice10.packetlib.Session;
 import com.github.steveice10.packetlib.event.session.*;
 import com.github.steveice10.packetlib.tcp.TcpSessionFactory;
 
-import co.akarin.endminecraftultra.Protocol.ACP;
-import co.akarin.endminecraftultra.utils.mainUtils;
-import co.akarin.endminecraftultra.proxy.ProxyPool;
-import co.akarin.endminecraftultra.main.Config;
-import co.akarin.endminecraftultra.Protocol.MCForge;
+import co.akarin.EndMinecraftUltra.protocol.ACP;
+import co.akarin.EndMinecraftUltra.utils.mainUtils;
+import co.akarin.EndMinecraftUltra.proxy.ProxyPool;
+import co.akarin.EndMinecraftUltra.main.Config;
+import co.akarin.EndMinecraftUltra.protocol.MCForge;
 
 public class DistributedBotAttack extends IAttack{
 

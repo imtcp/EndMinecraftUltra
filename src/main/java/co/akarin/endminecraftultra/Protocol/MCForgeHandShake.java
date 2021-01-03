@@ -1,4 +1,4 @@
-package co.akarin.endminecraftultra.Protocol;
+package co.akarin.EndMinecraftUltra.protocol;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;

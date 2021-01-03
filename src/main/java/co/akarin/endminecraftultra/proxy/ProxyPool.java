@@ -1,4 +1,4 @@
-package co.akarin.endminecraftultra.proxy;
+package co.akarin.EndMinecraftUltra.proxy;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
 
-import co.akarin.endminecraftultra.utils.mainUtils;
+import co.akarin.EndMinecraftUltra.utils.mainUtils;
 
 public class ProxyPool {
     public static List<String> proxys=new ArrayList<String>();

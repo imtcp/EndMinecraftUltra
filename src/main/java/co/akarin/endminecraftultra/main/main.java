@@ -1,4 +1,4 @@
-package co.akarin.endminecraftultra.main;
+package co.akarin.EndMinecraftUltra.main;
 
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
@@ -9,12 +9,12 @@ import javax.naming.NamingException;
 import javax.naming.directory.Attribute;
 import javax.naming.directory.InitialDirContext;
 
-import co.akarin.endminecraftultra.main.Config;
-import co.akarin.endminecraftultra.other.ASMInject;
-import co.akarin.endminecraftultra.Protocol.MCForgelnject;
+import co.akarin.EndMinecraftUltra.main.Config;
+import co.akarin.EndMinecraftUltra.other.ASMInject;
+import co.akarin.EndMinecraftUltra.protocol.MCForgelnject;
 
-import static co.akarin.endminecraftultra.utils.mainUtils.getCo;
-import static co.akarin.endminecraftultra.utils.mainUtils.log;
+import static co.akarin.EndMinecraftUltra.utils.mainUtils.getCo;
+import static co.akarin.EndMinecraftUltra.utils.mainUtils.log;
 
 public class main {
     private static String ip;

@@ -1,4 +1,4 @@
-package co.akarin.endminecraftultra.utils;
+package co.akarin.EndMinecraftUltra.utils;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

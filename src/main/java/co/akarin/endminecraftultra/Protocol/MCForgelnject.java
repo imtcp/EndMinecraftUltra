@@ -1,4 +1,4 @@
-package co.akarin.endminecraftultra.Protocol;
+package co.akarin.EndMinecraftUltra.protocol;
 
 import javassist.ClassPool;
 import javassist.CtClass;

@@ -1,23 +1,23 @@
-package co.akarin.endminecraftultra.main;
+package co.akarin.EndMinecraftUltra.main;
 
 import com.google.gson.Gson;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
+import java.nio.charset.Charset;
 import java.util.Random;
-import co.akarin.endminecraftultra.utils.mainUtils;
+import co.akarin.EndMinecraftUltra.utils.mainUtils;
 
 public class Config {
     public static Config instance;
     public static void loadConfig() {
         try {
-            instance = new Gson().fromJson(new InputStreamReader(new FileInputStream(new File("config.json"))), Config.class);
+            instance = new Gson().fromJson(new InputStreamReader(new FileInputStream(new File("config.json")), "utf-8"), Config.class);
         } catch (Exception e) {
 			mainUtils.log("*******************************************************");
             mainUtils.log("*错误！无法加载配置文件: config.json");
 			mainUtils.log("*请到'https://acg.kr/emuconfig'获取一个新的配置文件");
-			mainUtils.log("*如果配置文件内有中文等非英文语言请务必转码成ANSI使用!");
 			mainUtils.log("*******************************************************");
 			mainUtils.log(" ");
             instance = new Config();

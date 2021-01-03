@@ -1,4 +1,4 @@
-package co.akarin.endminecraftultra.ATTACK;
+package co.akarin.EndMinecraftUltra.attack;
 
 import java.util.HashMap;
 

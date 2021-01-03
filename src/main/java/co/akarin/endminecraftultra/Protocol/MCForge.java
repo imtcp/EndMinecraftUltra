@@ -1,4 +1,4 @@
-package co.akarin.endminecraftultra.Protocol;
+package co.akarin.EndMinecraftUltra.protocol;
 
 import com.github.steveice10.mc.protocol.packet.ingame.client.ClientPluginMessagePacket;
 import com.github.steveice10.mc.protocol.packet.ingame.server.ServerPluginMessagePacket;

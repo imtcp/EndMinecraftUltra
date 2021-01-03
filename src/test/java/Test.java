@@ -2,9 +2,9 @@ import java.util.HashMap;
 
 import com.github.steveice10.mc.protocol.packet.ingame.client.ClientChatPacket;
 
-import co.akarin.endminecraftultra.proxy.ProxyPool;
-import co.akarin.endminecraftultra.ATTACK.DistributedBotAttack;
-import co.akarin.endminecraftultra.utils.mainUtils;
+import co.akarin.EndMinecraftUltra.proxy.ProxyPool;
+import co.akarin.EndMinecraftUltra.attack.DistributedBotAttack;
+import co.akarin.EndMinecraftUltra.utils.mainUtils;
 
 
 public class Test {

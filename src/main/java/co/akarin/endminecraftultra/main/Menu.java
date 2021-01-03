@@ -1,15 +1,15 @@
-package co.akarin.endminecraftultra.main;
+package co.akarin.EndMinecraftUltra.main;
 
 
 import java.util.HashMap;
 import java.util.Scanner;
 
-import static co.akarin.endminecraftultra.utils.mainUtils.getCo;
-import static co.akarin.endminecraftultra.utils.mainUtils.log;
-import co.akarin.endminecraftultra.proxy.ProxyPool;
-import co.akarin.endminecraftultra.ATTACK.DistributedBotAttack;
-import co.akarin.endminecraftultra.ATTACK.IAttack;
-import co.akarin.endminecraftultra.ATTACK.MotdAttack;
+import static co.akarin.EndMinecraftUltra.utils.mainUtils.getCo;
+import static co.akarin.EndMinecraftUltra.utils.mainUtils.log;
+import co.akarin.EndMinecraftUltra.proxy.ProxyPool;
+import co.akarin.EndMinecraftUltra.attack.DistributedBotAttack;
+import co.akarin.EndMinecraftUltra.attack.IAttack;
+import co.akarin.EndMinecraftUltra.attack.MotdAttack;
 
 public class Menu {
     private String ip;
