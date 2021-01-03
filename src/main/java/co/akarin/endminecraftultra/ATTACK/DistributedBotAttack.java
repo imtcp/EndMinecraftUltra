@@ -27,7 +27,7 @@ import com.github.steveice10.packetlib.tcp.TcpSessionFactory;
 import co.akarin.endminecraftultra.Protocol.ACP;
 import co.akarin.endminecraftultra.utils.mainUtils;
 import co.akarin.endminecraftultra.proxy.ProxyPool;
-import co.akarin.endminecraftultra.Config;
+import co.akarin.endminecraftultra.main.Config;
 import co.akarin.endminecraftultra.Protocol.MCForge;
 
 public class DistributedBotAttack extends IAttack{

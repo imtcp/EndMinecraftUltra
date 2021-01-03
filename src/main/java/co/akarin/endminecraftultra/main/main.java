@@ -9,7 +9,7 @@ import javax.naming.NamingException;
 import javax.naming.directory.Attribute;
 import javax.naming.directory.InitialDirContext;
 
-import co.akarin.endminecraftultra.Config;
+import co.akarin.endminecraftultra.main.Config;
 import co.akarin.endminecraftultra.other.ASMInject;
 import co.akarin.endminecraftultra.Protocol.MCForgelnject;
 

@@ -1,4 +1,4 @@
-package co.akarin.endminecraftultra;
+package co.akarin.endminecraftultra.main;
 
 import com.google.gson.Gson;
 
@@ -24,7 +24,7 @@ public class Config {
         }
         if (instance.username == null || instance.username.length == 0) instance.username = new String[] {"$rnd"};
         if (instance.register == null || instance.register.length() == 0) instance.register = "/register $pwd $pwd";
-        if (instance.messages == null || instance.messages.length == 0) instance.messages = new String[] {"[$rnd] 哼哼~啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊~ [$rnd]", "[$rnd] $rnd啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊~ [$rnd]"};
+        if (instance.messages == null || instance.messages.length == 0) instance.messages = new String[] {"[$rnd] 咕咕咕咕咕咕咕咕咕咕咕 [$rnd]", "[$rnd] 咕咕咕咕咕咕咕咕咕咕咕咕 [$rnd]"};
     }
 
     public String[] username;
