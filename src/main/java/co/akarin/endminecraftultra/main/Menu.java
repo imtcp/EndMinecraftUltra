@@ -33,15 +33,15 @@ public class Menu {
     }
 
     public void _2() {
-        log("分布式假人压测选择", "请输入压测时长！(默认3600s)");
-        int time = getCo(scanner.nextLine(),3600);
-        log("请输入最大连接数(默认10000)");
-        int maxAttack = getCo(scanner.nextLine(),10000);
-        log("请输入每次加入服务器间隔(ms)");
-        int sleepTime = getCo(scanner.nextLine(),0);
+        log("分布式假人压测选择", "请输入压测时长！(默认600s)");
+        int time = getCo(scanner.nextLine(),600);
+        log("请输入最大连接数(默认100000)");
+        int maxAttack = getCo(scanner.nextLine(),100000);
+        log("请输入每次加入服务器间隔(默认10ms)");
+        int sleepTime = getCo(scanner.nextLine(),10);
         log("请输入是否开启TAB压测 y/n，默认关闭(n)");
         boolean tab = getCo(scanner.nextLine(),"n").equals("y");
-        log("请输入是否开启AntiAttackRL绕过功能 y/n，默认关闭(n)");
+        log("请输入是否开启AntiAttackRL绕过功能(仅支持旧版) y/n，默认关闭(n)");
         boolean lele = getCo(scanner.nextLine(),"n").equals("y");
         getProxy();
         IAttack attack = new DistributedBotAttack(time,maxAttack,sleepTime,lele,tab,new HashMap<String,String>());
@@ -49,7 +49,7 @@ public class Menu {
     }
 
     public void getProxy() {
-        log("请输入代理ip列表获取方式（1）： 1.通过API获取 2.通过本地获取 3.通过本地+API获取(http.txt)");
+        log("请输入代理ip获取方式（默认1）： 1.通过API获取 2.通过本地获取 3.通过API+本地获取(http.txt)");
         switch (getCo(scanner.nextLine(),1)) {
             case 1:
                 ProxyPool.getProxysFromAPIs();
