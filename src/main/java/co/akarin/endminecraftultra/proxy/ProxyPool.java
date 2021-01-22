@@ -16,7 +16,7 @@ public class ProxyPool {
     public static void getProxysFromAPIs() {
         mainUtils.log("Proxy", "正在使用API获取代理..");
 
-        //getProxysFromAPI("http://www.66ip.cn/mo.php?tqsl=9999");
+        getProxysFromAPI("http://www.66ip.cn/mo.php?tqsl=9999");
         getProxysFromAPI("https://www.89ip.cn/tqdl.html?api=1&num=9999");
 
         mainUtils.log("Proxy", "代理更新完成!数量:"+proxys.size());
