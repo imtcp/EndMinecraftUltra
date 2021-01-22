@@ -15,11 +15,11 @@ public class Config {
         try {
             instance = new Gson().fromJson(new InputStreamReader(new FileInputStream(new File("config.json")), "utf-8"), Config.class);
         } catch (Exception e) {
-			mainUtils.log("*******************************************************");
+            mainUtils.log("*******************************************************");
             mainUtils.log("*错误！无法加载配置文件: config.json");
-			mainUtils.log("*请到'https://acg.kr/emuconfig'获取一个新的配置文件");
-			mainUtils.log("*******************************************************");
-			mainUtils.log(" ");
+            mainUtils.log("*请到'https://acg.kr/emuconfig'获取一个新的配置文件");
+            mainUtils.log("*******************************************************");
+            mainUtils.log(" ");
             instance = new Config();
         }
         if (instance.username == null || instance.username.length == 0) instance.username = new String[] {"$rnd"};
